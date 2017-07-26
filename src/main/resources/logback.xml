@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%highlight(%-4level)] [%d{yyyy-MM-dd HH:mm:ss.SSS}] [%logger{36}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="kamon.influxdb" level="WARN" />
+    <logger name="org.apache.kafka" level="WARN" />
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+</configuration>
